@@ -1,0 +1,59 @@
+
+<html>
+<head></head>  
+<body >
+    <form method="post" action="registration.php">
+        <fieldset>
+            <legend>Registration</legend>
+            <table>
+                <tr>
+                    <td>
+                        Name:  
+                    </td>
+                    <td>
+                        <input type="text" id="name" name="name" value="">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Contact No: </td>
+                    <td>
+                        <input type="number" id="contactNo" name="contactNo" value="">
+                    </td>
+                </tr>
+                <tr>
+                    <td>User Name: </td>
+                    <td>
+                        <input type="text" id="userName" name="userName" value="">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Password: </td>
+                    <td>
+                        <input type="password" id="password" name="password" value="">
+                    </td>
+                </tr>
+            </table>
+            <br>
+            <input type="submit" name="submit" value="click" onclick="f1()"><br>
+
+        </fieldset>
+        <p id="msg"></p>
+    </form>          
+    <script>
+        function f1(){
+                let name = document.getElementById('name').value;
+                let contactNo = document.getElementById('contactNo').value;
+                let userName = document.getElementById('userName').value;
+                let password = document.getElementById('password').value;
+                if(userName == ""|| contactNo=="" || userName=="" || password==""){
+                    document.getElementById('msg').innerHTML = "please fill all the fields.....";
+                    document.getElementById('msg').style.color = "red";
+
+                }else{
+                    document.getElementById('msg').innerHTML = "";
+                }
+
+            }
+    </script>
+</body>
+</html>
